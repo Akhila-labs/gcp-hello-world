@@ -6,5 +6,5 @@ region     = "us-central1"          # Replace with your desired GCP region
 function_name        = "hello-world-function"  # Name of the Cloud Function
 function_runtime     = "python310"            # Runtime for the Cloud Function (e.g., python310, nodejs16)
 function_entry_point = "hello_world"          # Entry point for the Cloud Function
-bucket_name          = "hello-world-bucket-akhila-12345" # Replace with a unique name
+bucket_name          = "hello-world-bucket-akhila-1" # Replace with a unique name
 load_balancer_name   = "hello-world-lb"       # Name of the Load Balancer
