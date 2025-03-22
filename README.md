@@ -1,21 +1,4 @@
 # gcp-hello-world
-gcp-hello-world/
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars
-│   ├── modules/
-│       ├── cloud_function/
-│           ├── main.tf
-│           ├── variables.tf
-│           ├── outputs.tf
-├── cloud_function/
-│   ├── main.py
-│   ├── requirements.txt
-│   ├── function.zip
-├── README.md
-
 
 # Prerequisites:
 enable required API
