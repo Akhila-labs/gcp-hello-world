@@ -1,7 +1,7 @@
 provider "google" {
   project = var.project_id
   region  = var.region
-  credentials = file("${path.module}/secrets.json") # Optional: Use if you have a service account key
+  credentials = file("${path.module}/secrets.json") # Optional: Use if you have a service acco>
 }
 
 module "cloud_function" {
@@ -24,5 +24,6 @@ module "load_balancer" {
 module "security" {
   source = "./modules/security"
 
-  function_name = var.function_name
+  function_name = module.cloud_function.function_name
+  region        = var.region
 }
