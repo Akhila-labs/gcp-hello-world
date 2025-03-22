@@ -28,6 +28,20 @@ resource "google_compute_target_http_proxy" "http_proxy" {
   url_map = google_compute_url_map.url_map.id
 }
 
+resource "google_compute_health_check" "health_check" {
+  name = "${var.function_name}-health-check"
+  http_health_check {
+    port = 80
+  }
+}
+
+resource "google_compute_backend_service" "hello_world_backend" {
+  name = "${var.function_name}-backend"
+  backend {
+    group = google_compute_region_network_endpoint_group.function_neg.id
+  }
+  health_checks = [google_compute_health_check.health_check.id] # Add health check
+}
 resource "google_compute_global_forwarding_rule" "http_forwarding_rule" {
   name       = "${var.function_name}-http-forwarding-rule"
   target     = google_compute_target_http_proxy.http_proxy.id
