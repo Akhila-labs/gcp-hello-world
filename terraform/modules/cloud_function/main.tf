@@ -6,7 +6,8 @@ resource "google_storage_bucket" "function_bucket" {
 resource "google_storage_bucket_object" "function_archive" {
   name   = "function.zip"
   bucket = google_storage_bucket.function_bucket.name
-  source = "${path.module}/../cloud_function/function.zip"
+  source = "${path.module}/../../cloud_function/function.zip" # Correct path
+  depends_on = [google_storage_bucket.function_bucket] # Ensure bucket is created first
 }
 
 resource "google_cloudfunctions_function" "hello_world" {
