@@ -37,6 +37,8 @@ GCP credentials configured locally.
 # terraform installation process
 https://developer.hashicorp.com/terraform/install
 Terraform installed.
+# note : make sure for testing the project add required credentials related the project create like , project _ID, service account, secrets.json
+
 
 # Testing Instructions:
 
