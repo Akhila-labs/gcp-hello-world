@@ -18,13 +18,13 @@ variable "function_name" {
 variable "function_runtime" {
   description = "The runtime for the Cloud Function"
   type        = string
-  default     = "python310" # or "nodejs16" for Node.js
+  default     = "python310"
 }
 
 variable "function_entry_point" {
   description = "The entry point for the Cloud Function"
   type        = string
-  default     = "hello_world" # or "helloWorld" for Node.js
+  default     = "hello_world" 
 }
 
 variable "bucket_name" {
