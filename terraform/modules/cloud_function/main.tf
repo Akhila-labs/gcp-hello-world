@@ -1,15 +1,15 @@
-# Create a GCS bucket for the Cloud Function code
+
 resource "google_storage_bucket" "function_bucket" {
   name     = var.bucket_name
   location = var.region
 }
 
-# Upload the Cloud Function code (function.zip) to the GCS bucket
+
 resource "google_storage_bucket_object" "function_archive" {
   name   = "function.zip"
   bucket = google_storage_bucket.function_bucket.name
-  source = "${path.module}/../../cloud_function/function.zip" # Corrected path
-  depends_on = [google_storage_bucket.function_bucket] # Ensure bucket is created first
+  source = "${path.module}/../../cloud_function/function.zip" 
+  depends_on = [google_storage_bucket.function_bucket] 
 }
 
 # Deploy the Cloud Function
