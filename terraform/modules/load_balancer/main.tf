@@ -7,7 +7,7 @@ resource "google_compute_backend_service" "hello_world_backend" {
   backend {
     group = google_compute_region_network_endpoint_group.function_neg.id
   }
-  # Remove the health_checks argument
+  
 }
 
 resource "google_compute_region_network_endpoint_group" "function_neg" {
