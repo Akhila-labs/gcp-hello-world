@@ -1,7 +1,7 @@
 provider "google" {
   project = var.project_id
   region  = var.region
-  credentials = file("${path.module}/secrets.json") # Optional: Use if you have a service acco>
+  credentials = file("${path.module}/secrets.json") 
 }
 
 module "cloud_function" {
