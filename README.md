@@ -70,10 +70,10 @@ Testing Locally
 1. Navigate to the `cloud_function` directory.
 2. Install dependencies:
    - For Python: `pip install -r requirements.txt`
-   - For Node.js: `npm install`
+   
 3. Run the function locally:
    - For Python: `functions-framework --target hello_world`
-   - For Node.js: `npx functions-framework --target=helloWorld`
+  
 
 # Deploying the Function
 1. Zip the Cloud Function code:
